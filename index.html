@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1F5C5A">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Oud and Musk Laundry</title>
+<meta name="description" content="Laundry, ironing and dry cleaning in Sharjah and Ajman. Book a pickup on WhatsApp.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap">
+<style>
+/* Layout: teal brand bands alternate with light paper sections; one centred 1200px column, mobile first. Single committed brand look. */
+:root{
+  --teal:#1F5C5A; --teal-d:#164543; --teal-dd:#0F3332;
+  --aqua:#5CC6C4; --aqua-l:#CDEFEE; --aqua-t:#E6F5F4;
+  --copper:#D98A5B; --copper-d:#A4552B; --copper-l:#F6C7A6; --copper-bg:#FFF4EC; --copper-ink:#7A3E1E;
+  --ink:#10302F; --muted:#4B6664; --paper:#F5F9F8; --white:#FFFFFF; --line:#DDE6E5; --line-2:#CFE0DE; --mutedf:#8FB5B3;
+  --wa:#25D366; --wa-ink:#06301A; --star:#E8A33D;
+  --f-en:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --f-ar:'Tajawal','Poppins',system-ui,sans-serif;
+  color-scheme:light;
+}
+html{scroll-behavior:smooth;background:var(--paper)}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-en);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:70;background:var(--teal)}
+*{box-sizing:border-box}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--aqua);outline-offset:3px}
+html[lang=ar] body{font-family:var(--f-ar)}
+html[lang=ar] .h1,html[lang=ar] .h2,html[lang=ar] .kick,html[lang=ar] .ft h4{letter-spacing:0}
+html[lang=ar] .h1,html[lang=ar] .h2{line-height:1.2}
+.f-ar{font-family:var(--f-ar)}
+.f-en{font-family:var(--f-en)}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+[dir=rtl] .flip{transform:scaleX(-1)}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{scroll-margin-top:72px}
+
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(31,92,90,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.hdr-in{display:flex;align-items:center;gap:12px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--white);margin-inline-end:auto;min-width:0}
+.brand-t{display:flex;flex-direction:column;line-height:1.1}
+.brand-1{font-family:var(--f-en);font-weight:700;font-size:15px;letter-spacing:.06em;white-space:nowrap}
+.brand-1 i{font-style:normal;font-weight:400;font-size:11px;color:var(--aqua-l);margin:0 3px;letter-spacing:.02em}
+.brand-2{display:flex;gap:6px;align-items:center;font-size:12px;color:var(--aqua-l);white-space:nowrap}
+.brand-2 .f-ar{font-size:13px}
+.nav{display:none;gap:26px;font-size:14px;color:rgba(255,255,255,.86)}
+.nav a:hover{color:var(--white)}
+.lg-sw{display:flex;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:3px}
+.lg{border:0;background:transparent;color:var(--white);font-size:12.5px;font-weight:600;height:38px;padding:0 10px;min-width:42px;border-radius:999px}
+.lg[aria-pressed=true]{background:var(--white);color:var(--teal)}
+.wa-sm{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--wa);color:var(--wa-ink);font-weight:600;font-size:14px;height:44px;min-width:44px;padding:0 12px;border-radius:999px;transition:transform .2s}
+.wa-sm:hover{transform:translateY(-1px)}
+.wa-sm .tx{display:none}
+
+.weave{background-color:var(--teal);background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 1px,transparent 1px 8px),repeating-linear-gradient(-45deg,rgba(255,255,255,.035) 0 1px,transparent 1px 8px)}
+.hero{color:var(--white);position:relative;overflow:hidden}
+.hero-grid{display:grid;gap:28px;padding-block:40px 56px;align-items:center}
+.hero-grid>div{min-width:0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;color:var(--aqua-l);border:1px solid rgba(205,239,238,.32);border-radius:999px;padding:7px 14px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--copper);box-shadow:0 0 0 4px rgba(217,138,91,.22);flex:none}
+.h1{margin:22px 0 0;font-weight:600;font-size:clamp(38px,10.6vw,84px);line-height:1.02;letter-spacing:-.035em;text-wrap:balance}
+.h1 span{display:block}
+.h1 .b{color:var(--aqua)}
+.lede{font-size:clamp(17px,4.4vw,21px);color:rgba(255,255,255,.86);max-width:32ch;margin:20px 0 0}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.ctas a{flex:1 1 100%}
+.btn-wa{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 26px;border-radius:999px;background:var(--wa);color:var(--wa-ink);font-weight:600;font-size:17px;box-shadow:0 14px 32px -14px rgba(37,211,102,.75);transition:transform .2s,box-shadow .2s;text-align:center}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 20px 36px -14px rgba(37,211,102,.85)}
+.btn-gh{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 24px;border-radius:999px;border:1.5px solid rgba(255,255,255,.42);color:var(--white);font-weight:600;font-size:16px;transition:background .2s}
+.btn-gh:hover{background:rgba(255,255,255,.08)}
+.rating{display:inline-flex;align-items:center;gap:12px;margin-top:26px;background:var(--white);color:var(--ink);border-radius:18px;padding:8px 16px 8px 8px}
+[dir=rtl] .rating{padding:8px 8px 8px 16px}
+.sc{display:flex;align-items:center;background:var(--copper-bg);color:var(--copper-d);font-weight:700;font-size:22px;border-radius:12px;padding:6px 12px;line-height:1}
+.rt{display:flex;flex-direction:column;line-height:1.25}
+.stars{display:flex;gap:2px;color:var(--star)}
+.rt small{font-size:13px;color:var(--muted)}
+.art{position:relative;width:100%;max-width:min(520px,100%);margin:0 auto;aspect-ratio:1/1}
+.art svg.main{position:absolute;inset:0;width:100%;height:100%}
+.spin{transform-origin:200px 222px;animation:spin 80s linear infinite}
+.wisp{fill:none;stroke-linecap:round;stroke-dasharray:5 10;animation:drift 3.4s linear infinite}
+.wisps{animation:rise 5s ease-in-out infinite alternate}
+.tag{position:absolute;inset-inline-start:0;bottom:12%;background:var(--white);color:var(--ink);border-radius:16px;padding:12px 18px 12px 30px;box-shadow:0 24px 40px -20px rgba(0,0,0,.45);transform:rotate(-5deg);animation:float 6s ease-in-out infinite;display:flex;align-items:center;gap:14px}
+[dir=rtl] .tag{padding:12px 30px 12px 18px}
+.tag::before{content:'';position:absolute;inset-inline-start:11px;top:50%;width:9px;height:9px;margin-top:-4.5px;border-radius:50%;background:var(--teal)}
+.tag .ti{display:flex;flex-direction:column;line-height:1.2}
+.tag .ti b{font-size:15px}
+.tag .ti small{font-size:12px;color:var(--muted)}
+.tag .tp{font-weight:700;font-size:26px;line-height:1;display:flex;align-items:baseline;gap:4px}
+.tag .tp small{font-size:11px;color:var(--muted);font-weight:600}
+.chip{position:absolute;inset-inline-end:2%;top:16%;background:var(--copper);color:var(--ink);font-weight:600;font-size:13px;border-radius:999px;padding:8px 14px;display:flex;align-items:center;gap:8px;transform:rotate(4deg);animation:float 7s ease-in-out infinite reverse}
+
+.mq{background:var(--aqua);color:var(--teal-dd);overflow:hidden;direction:ltr}
+.mq-track{display:flex;width:max-content;animation:mq 42s linear infinite}
+.mq-set{display:flex;align-items:center}
+.mq-set span{padding:16px;font-weight:600;font-size:18px;white-space:nowrap}
+.mq-set .f-ar{font-size:20px}
+.mq-set i{width:7px;height:7px;background:var(--teal-dd);transform:rotate(45deg);flex:none;opacity:.55}
+
+.sec{padding-block:72px}
+.kick{display:inline-flex;gap:10px;align-items:center;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--copper-d)}
+.kick i{width:22px;height:1.5px;background:currentColor;display:block}
+.h2{margin:14px 0 0;font-size:clamp(32px,8vw,60px);line-height:1.04;letter-spacing:-.03em;font-weight:600;color:var(--ink);text-wrap:balance}
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 40px;margin-bottom:36px}
+.sec-head>*{min-width:0}
+.sec-head p{max-width:34ch;color:var(--muted);margin:0;font-size:17px}
+
+.steps{display:grid;gap:14px}
+.step{position:relative;background:var(--white);border:1px solid var(--line);border-radius:26px;padding:26px;overflow:hidden;min-height:230px;display:flex;flex-direction:column;justify-content:flex-end}
+.step .num{position:absolute;inset-inline-end:18px;top:4px;font-family:var(--f-en);font-size:104px;font-weight:700;line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--line-2);letter-spacing:-.05em}
+.ic{width:56px;height:56px;border-radius:18px;background:var(--aqua-t);color:var(--teal);display:grid;place-items:center;position:absolute;top:26px;inset-inline-start:26px}
+.step h3{margin:0 0 6px;font-size:21px;font-weight:600;letter-spacing:-.01em;line-height:1.25}
+.step p{margin:0;color:var(--muted)}
+.step.lead{background:var(--teal);color:var(--white);border-color:var(--teal)}
+.step.lead p{color:var(--aqua-l)}
+.step.lead .num{-webkit-text-stroke-color:rgba(205,239,238,.28)}
+.step.lead .ic{background:var(--wa);color:var(--wa-ink)}
+
+.svcs{background:var(--white)}
+.svc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.svc{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:18px;min-height:250px;color:var(--ink);transition:transform .25s,box-shadow .25s,border-color .25s,background .25s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 26px 40px -26px rgba(31,92,90,.45);border-color:var(--aqua);background:var(--white)}
+.ic2{width:52px;height:52px;border-radius:16px;background:var(--teal);color:var(--white);display:grid;place-items:center}
+.svc h3{margin:24px 0 6px;font-size:18px;font-weight:600;line-height:1.25}
+.svc p{margin:0;color:var(--muted);font-size:14.5px;flex:1}
+.from{margin-top:16px;padding-top:12px;border-top:1px dashed var(--line-2);display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:13px;color:var(--muted)}
+.from b{font-size:24px;color:var(--ink);font-weight:700}
+.go{width:32px;height:32px;border-radius:50%;background:var(--white);border:1px solid var(--line);display:grid;place-items:center;color:var(--teal);flex:none}
+
+.prices{color:var(--white)}
+.prices .h2{color:var(--white)}
+.prices .kick{color:var(--copper-l)}
+.prices .sec-head p{color:var(--aqua-l)}
+.receipt{background:var(--white);color:var(--ink);border-radius:28px;padding:22px 16px;position:relative;box-shadow:0 40px 60px -40px rgba(0,0,0,.5)}
+.receipt::before{content:'';position:absolute;left:28px;right:28px;top:-7px;height:14px;background:radial-gradient(circle at 7px 7px,var(--teal) 5.5px,transparent 6px) 0 0/20px 14px repeat-x}
+.tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.tab{display:flex;flex-direction:column;align-items:flex-start;gap:2px;border:1.5px solid var(--line);background:var(--paper);border-radius:16px;padding:10px 14px;min-height:60px;text-align:start;color:var(--ink);transition:background .2s,border-color .2s}
+.tab:hover{border-color:var(--aqua)}
+.tab b{font-size:15px;font-weight:600}
+.tab small{font-size:12px;color:var(--muted)}
+.tab[aria-pressed=true]{background:var(--teal);border-color:var(--teal);color:var(--white)}
+.tab[aria-pressed=true] small{color:var(--aqua-l)}
+.bar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin:22px 0 6px}
+.cur{font-size:14px;color:var(--muted)}
+.cur b{color:var(--ink)}
+.vsw{display:flex;background:#EEF4F3;border-radius:999px;padding:3px}
+.vb{border:0;background:transparent;height:38px;padding:0 14px;border-radius:999px;font-size:13px;font-weight:600;color:var(--muted)}
+.vb[aria-pressed=true]{background:var(--white);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+.plist{display:grid;column-gap:48px}
+.prow{display:flex;align-items:baseline;gap:10px;padding:13px 2px;border-bottom:1px solid #E7EEED}
+.pn{display:flex;flex-direction:column;min-width:0}
+.pn b{font-weight:500;font-size:16px;line-height:1.3}
+.ps{font-size:13px;color:var(--muted);line-height:1.3}
+.leader{flex:1;border-bottom:2px dotted var(--line-2);min-width:16px;transform:translateY(-5px)}
+.pv{font-weight:700;font-size:20px;white-space:nowrap;display:flex;align-items:baseline;gap:4px;font-variant-numeric:tabular-nums}
+.pv small{font-size:11px;font-weight:600;color:var(--muted)}
+.tg-box{overflow-x:auto;border:1px solid #E7EEED;border-radius:18px;margin-top:12px}
+.tg{min-width:600px}
+.tr{display:grid;grid-template-columns:minmax(170px,1.7fr) repeat(4,minmax(80px,1fr));border-bottom:1px solid #E7EEED}
+.tr:last-child{border-bottom:0}
+.tr.th{background:var(--paper)}
+.c{padding:12px 8px;text-align:center;font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center}
+.c.on{background:var(--aqua-t);font-weight:700}
+.cn{padding:10px 16px;display:flex;flex-direction:column;justify-content:center}
+.cn b{font-weight:500;font-size:15px;line-height:1.3}
+.hb{border:0;background:transparent;font-size:13px;font-weight:600;color:var(--teal);min-height:48px;width:100%;padding:4px}
+.note{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:22px;padding:14px 16px;background:var(--copper-bg);border-radius:18px;color:var(--copper-ink);font-weight:500}
+.note .btn-wa{min-height:48px;font-size:15px;padding:0 18px;box-shadow:none}
+
+.area-grid{display:grid;gap:14px}
+.area-grid>*{min-width:0}
+.info{background:var(--white);border:1px solid var(--line);border-radius:28px;padding:26px;display:flex;flex-direction:column;gap:20px}
+.big{font-size:clamp(22px,4.6vw,30px);font-weight:600;line-height:1.25;letter-spacing:-.015em;margin:0;text-wrap:balance}
+.li{display:flex;gap:14px;align-items:flex-start}
+.li>div{min-width:0;font-size:15px}
+.li a:hover{color:var(--teal);text-decoration:underline}
+.ics{width:42px;height:42px;border-radius:12px;background:var(--aqua-t);display:grid;place-items:center;color:var(--teal);flex:none}
+.li b{display:block;font-size:13px;color:var(--muted);font-weight:500}
+.zones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.zone{position:relative;overflow:hidden;border-radius:28px;color:var(--white);padding:22px;min-height:230px;display:flex;flex-direction:column;justify-content:flex-end}
+.zone::after{content:'';position:absolute;width:190px;height:190px;border-radius:50%;border:1.5px dashed rgba(205,239,238,.4);top:-60px;inset-inline-end:-60px}
+.zk{position:absolute;top:22px;inset-inline-start:22px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--aqua-l);font-weight:600}
+html[lang=ar] .zk{letter-spacing:0;font-size:14px}
+.zone b{font-size:clamp(28px,6vw,52px);font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.za{color:var(--aqua-l);font-size:18px;margin-top:4px}
+.zone.alt{background:var(--aqua);color:var(--teal-dd)}
+.zone.alt .zk,.zone.alt .za{color:var(--teal-dd)}
+.zone.alt::after{border-color:rgba(15,51,50,.28)}
+.zone-note{grid-column:1/-1;background:var(--copper-bg);color:var(--copper-ink);border-radius:20px;padding:16px 18px;display:flex;gap:12px;align-items:center;font-weight:500;font-size:16px}
+
+.cta{color:var(--white);text-align:center;padding-block:88px;background-color:var(--teal-d)}
+.cta .h2{color:var(--white);font-size:clamp(38px,10vw,92px);margin:18px auto 0;max-width:14ch}
+.cta p{color:var(--aqua-l);font-size:18px;margin:18px auto 0;max-width:36ch}
+.cta .btn-wa{margin-top:32px;min-height:64px;font-size:18px;padding:0 32px}
+.tels{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px;margin-top:22px;color:var(--aqua-l);font-size:14px}
+.tel{display:inline-flex;gap:8px;align-items:center;min-height:48px;padding:0 18px;border-radius:999px;border:1.5px solid rgba(255,255,255,.3);font-weight:600;color:var(--white);transition:background .2s}
+.tel:hover{background:rgba(255,255,255,.08)}
+
+.ft{background:var(--teal-dd);color:var(--aqua-l);padding-block:56px 110px;font-size:14.5px}
+.ft-grid{display:grid;gap:32px}
+.ft-grid>*{min-width:0}
+.ft h4{margin:0 0 14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--white);font-weight:600}
+.ft a:hover{color:var(--white)}
+.ft ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.ft-tag{margin:14px 0 0;max-width:30ch;color:var(--mutedf)}
+.fb{display:flex;gap:12px;align-items:center;color:var(--white)}
+.fb svg{width:44px;height:44px;padding:11px;border-radius:12px;border:1px solid rgba(255,255,255,.2);flex:none}
+.fb span{display:flex;flex-direction:column;line-height:1.35;color:var(--aqua-l)}
+.fb b{color:var(--white);font-weight:600}
+.ft-b{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:var(--mutedf)}
+
+.fab{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));inset-inline-end:calc(18px + env(safe-area-inset-right,0px));z-index:60;width:62px;height:62px;border-radius:50%;background:var(--wa);color:var(--wa-ink);display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(0,0,0,.4)}
+[dir=rtl] .fab{inset-inline-end:calc(18px + env(safe-area-inset-left,0px))}
+.fab::after{content:'';position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:ring 2.2s ease-out infinite}
+
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes drift{to{stroke-dashoffset:-60}}
+@keyframes rise{from{transform:translateY(4px)}to{transform:translateY(-6px)}}
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -8px}}
+@keyframes mq{to{transform:translateX(-50%)}}
+@keyframes ring{from{transform:scale(1);opacity:.8}to{transform:scale(1.5);opacity:0}}
+
+@media (max-width:359px){.brand-2{display:none}.lg{min-width:36px;padding:0 6px}}
+@media (min-width:420px){.wa-sm .tx{display:inline}.wa-sm{padding:0 16px}}
+@media (min-width:560px){.ctas a{flex:0 0 auto}.tabs{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (min-width:760px){
+  .wrap{padding-left:max(40px,env(safe-area-inset-left,0px));padding-right:max(40px,env(safe-area-inset-right,0px))}
+  .sec{padding-block:112px}
+  .steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+  .step{min-height:280px;padding:30px}
+  .ic{top:30px;inset-inline-start:30px}
+  .plist{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .receipt{padding:36px}
+  .ft-grid{grid-template-columns:1.5fr 1fr 1fr 1fr}
+  .cta{padding-block:130px}
+  .info{padding:36px}
+}
+@media (min-width:960px){
+  .nav{display:flex}
+  .hero-grid{grid-template-columns:1.08fr .92fr;gap:40px;padding-block:72px 96px}
+  .h1{font-size:clamp(56px,6.2vw,84px)}
+  .h2{font-size:clamp(44px,4.6vw,60px)}
+  .cta .h2{font-size:clamp(60px,6.8vw,92px)}
+  .svc-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+  .svc{padding:22px;min-height:300px}
+  .area-grid{grid-template-columns:1fr 1.1fr;gap:16px}
+  .zone{min-height:280px;padding:28px}
+  .zk{top:28px;inset-inline-start:28px}
+  .fab{display:none}
+  .ft{padding-block:56px 40px}
+}
+@media (prefers-reduced-motion:reduce){*,*::after{animation:none !important;transition:none !important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#top" aria-label="Oud and Musk Laundry">
+      <svg width="44" height="44" viewBox="0 0 56 56" aria-hidden="true">
+        <path d="M28 1.5C31.6 5.2 32.6 8 30.4 10.4C29.4 11.4 26.9 11.5 25.9 10.2C24.3 8.2 25.6 5.2 28 1.5Z" fill="#D98A5B"></path>
+        <rect x="5" y="14" width="46" height="39" rx="14" fill="#5CC6C4" fill-opacity="0.14" stroke="#5CC6C4" stroke-width="1.8"></rect>
+        <path d="M15 31V45H41V31" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"></path>
+        <path d="M20 25Q28 20 36 25" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M20 25L28 31L24 37Z M36 25L28 31L32 37Z" fill="#fff"></path>
+        <path d="M28 31V45" stroke="#CDEFEE" stroke-width="1.5"></path>
+      </svg>
+      <span class="brand-t">
+        <span class="brand-1">OUD<i>and</i>MUSK</span>
+        <span class="brand-2"><span class="f-en">Laundry</span><span aria-hidden="true">·</span><span class="f-ar" lang="ar">عود و مسك</span></span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#how" data-i="navHow">How it works</a>
+      <a href="#services" data-i="navSvc">Services</a>
+      <a href="#prices" data-i="navPrices">Prices</a>
+      <a href="#area" data-i="navArea">Delivery</a>
+    </nav>
+    <div class="lg-sw" role="group" aria-label="Language">
+      <button type="button" class="lg" id="lang-en" aria-pressed="true">EN</button>
+      <button type="button" class="lg" id="lang-ar" aria-pressed="false" lang="ar">عربي</button>
+    </div>
+    <a class="wa-sm" data-wa href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.6-2-1-.9.8a4 4 0 0 1-2-2l.8-.9-1-2z"></path></svg>
+      <span class="tx" data-i="wa">WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<main>
+<section class="hero weave" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span><span data-i="eyebrow">Laundry · Ironing · Dry cleaning</span></span>
+      <h1 class="h1"><span data-i="h1a">Fresh, clean clothes.</span><span class="b" data-i="h1b">Picked up from your door.</span></h1>
+      <p class="lede" data-i="sub">Laundry, ironing and dry cleaning in Sharjah &amp; Ajman.</p>
+      <div class="ctas">
+        <a class="btn-wa" data-wa href="#" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.6-2-1-.9.8a4 4 0 0 1-2-2l.8-.9-1-2z"></path></svg>
+          <span data-i="book">Book a pickup on WhatsApp</span>
+        </a>
+        <a class="btn-gh" href="#prices"><span data-i="see">See prices</span>
+          <svg class="flip" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+      <div class="rating">
+        <span class="sc">4.9</span>
+        <span class="rt">
+          <span class="stars" role="img" aria-label="4.9 out of 5 stars">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.2 1.3-6.6-4.9-4.6 6.6-.8z"></path></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.2 1.3-6.6-4.9-4.6 6.6-.8z"></path></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.2 1.3-6.6-4.9-4.6 6.6-.8z"></path></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.2 1.3-6.6-4.9-4.6 6.6-.8z"></path></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.2 1.3-6.6-4.9-4.6 6.6-.8z"></path></svg>
+          </span>
+          <small><span data-i="ratingLbl">Google rating</span> · <span data-i="reviews">127 reviews</span></small>
+        </span>
+      </div>
+    </div>
+    <div class="art">
+      <svg class="main" viewBox="0 0 400 400" aria-hidden="true">
+        <g class="spin"><circle cx="200" cy="222" r="176" fill="none" stroke="#5CC6C4" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="2 9"></circle></g>
+        <circle cx="200" cy="222" r="140" fill="none" stroke="#CDEFEE" stroke-opacity="0.12" stroke-width="1"></circle>
+        <rect x="82" y="138" width="236" height="222" rx="66" fill="#164543" stroke="#5CC6C4" stroke-opacity="0.55" stroke-width="1.5"></rect>
+        <rect x="128" y="200" width="144" height="128" rx="14" fill="#F5F9F8"></rect>
+        <path d="M128 296H166M234 296H272" stroke="#DDE6E5" stroke-width="2"></path>
+        <path d="M162 202Q200 180 238 202L238 211Q200 190 162 211Z" fill="#CDEFEE"></path>
+        <path d="M164 207L200 230L184 254Z" fill="#fff" stroke="#9BCFCB" stroke-width="1.5" stroke-linejoin="round"></path>
+        <path d="M236 207L200 230L216 254Z" fill="#fff" stroke="#9BCFCB" stroke-width="1.5" stroke-linejoin="round"></path>
+        <path d="M200 232V328" stroke="#B9DCDA" stroke-width="2"></path>
+        <circle cx="200" cy="266" r="3.2" fill="#9BCFCB"></circle>
+        <circle cx="200" cy="298" r="3.2" fill="#9BCFCB"></circle>
+        <path d="M200 98C215 113 218 125 209 135C204 140 195 140 191 135C182 126 187 113 200 98Z" fill="#D98A5B"></path>
+        <path d="M200 115C205 121 206 127 202.5 130.5C200.5 132.5 197 132 195.8 129.8C194 126.5 196.5 121.5 200 115Z" fill="#F6C7A6"></path>
+        <g class="wisps">
+          <path class="wisp" d="M200 92C184 78 214 62 199 46C186 33 209 20 198 6" stroke="#D98A5B" stroke-width="2.6"></path>
+          <path class="wisp" d="M209 94C232 80 215 62 238 47C256 35 240 20 255 8" stroke="#5CC6C4" stroke-width="2.2" style="animation-duration:4.2s"></path>
+          <path class="wisp" d="M191 94C168 81 185 62 162 48C144 37 160 21 146 9" stroke="#CDEFEE" stroke-opacity="0.75" stroke-width="2" style="animation-duration:5s"></path>
+        </g>
+        <path d="M300 180l2.4 5.6 5.6 2.4-5.6 2.4-2.4 5.6-2.4-5.6-5.6-2.4 5.6-2.4z" fill="#CDEFEE"></path>
+        <path d="M104 250l1.8 4.2 4.2 1.8-4.2 1.8-1.8 4.2-1.8-4.2-4.2-1.8 4.2-1.8z" fill="#D98A5B"></path>
+      </svg>
+      <div class="tag">
+        <span class="ti"><b data-i="tagItem">Shirt</b><small data-i="tagSvc">Steam iron</small></span>
+        <span class="tp">2<small data-i="aed">AED</small></span>
+      </div>
+      <span class="chip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg>
+        <span data-i="chip">Sharjah · Ajman</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<div class="mq" aria-hidden="true">
+  <div class="mq-track">
+    <div class="mq-set"><span>Steam Iron</span><i></i><span class="f-ar">كي بالبخار</span><i></i><span>Washing</span><i></i><span class="f-ar">غسيل</span><i></i><span>Wash &amp; Iron</span><i></i><span class="f-ar">غسيل وكي</span><i></i><span>Dry Clean</span><i></i><span class="f-ar">تنظيف جاف</span><i></i><span>Sharjah</span><i></i><span class="f-ar">الشارقة</span><i></i><span>Ajman</span><i></i><span class="f-ar">عجمان</span><i></i></div>
+    <div class="mq-set"><span>Steam Iron</span><i></i><span class="f-ar">كي بالبخار</span><i></i><span>Washing</span><i></i><span class="f-ar">غسيل</span><i></i><span>Wash &amp; Iron</span><i></i><span class="f-ar">غسيل وكي</span><i></i><span>Dry Clean</span><i></i><span class="f-ar">تنظيف جاف</span><i></i><span>Sharjah</span><i></i><span class="f-ar">الشارقة</span><i></i><span>Ajman</span><i></i><span class="f-ar">عجمان</span><i></i></div>
+  </div>
+</div>
+
+<section class="sec" id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="kick"><i></i><span data-i="navHow">How it works</span></span><h2 class="h2" data-i="howTitle">Three easy steps.</h2></div>
+      <p data-i="howSub">No need to leave home. Just send us a message.</p>
+    </div>
+    <div class="steps">
+      <div class="step lead">
+        <span class="num" aria-hidden="true">1</span>
+        <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"></path></svg></span>
+        <h3 data-i="s1">Message us on WhatsApp</h3>
+        <p data-i="d1">Send your items and your address.</p>
+      </div>
+      <div class="step">
+        <span class="num" aria-hidden="true">2</span>
+        <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 6.5h11v10h-11z"></path><path d="M13.5 10h4l3 3.2v3.3h-7z"></path><circle cx="6.5" cy="17.5" r="1.9"></circle><circle cx="17" cy="17.5" r="1.9"></circle></svg></span>
+        <h3 data-i="s2">We pick up your clothes</h3>
+        <p data-i="d2">From your home in Sharjah or Ajman.</p>
+      </div>
+      <div class="step">
+        <span class="num" aria-hidden="true">3</span>
+        <span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.5l4 2 4-2 5 4-2.8 3-2.2-1.2V20.5H8V9.3L5.8 10.5 3 7.5z"></path><path d="M12 5.5V9"></path></svg></span>
+        <h3 data-i="s3">Clean and ironed, back to you</h3>
+        <p data-i="d3">Delivered back to your door.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec svcs" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="kick"><i></i><span data-i="navSvc">Services</span></span><h2 class="h2" data-i="svcTitle">Four services. One clear price.</h2></div>
+      <p data-i="svcSub">Tap a service to see its prices.</p>
+    </div>
+    <div class="svc-grid">
+      <a class="svc" href="#prices" data-svc="0">
+        <span class="ic2"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 18h17a1.5 1.5 0 0 0 1.5-1.5v-1A6.5 6.5 0 0 0 14.5 9H9"></path><path d="M2.5 18l2.2-5.5H21"></path><path d="M7 5c0 1 1 1 1 2M11 4c0 1 1 1 1 2"></path></svg></span>
+        <h3 data-i="svc0">Steam Iron</h3>
+        <p data-i="svcD0">Sharp, wrinkle-free clothes.</p>
+        <span class="from"><span><span data-i="from">From</span> <b>2</b> <span data-i="aed">AED</span></span><span class="go"><svg class="flip" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></span>
+      </a>
+      <a class="svc" href="#prices" data-svc="1">
+        <span class="ic2"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="2.5"></rect><circle cx="12" cy="13" r="4.5"></circle><path d="M7.5 6h2M10 13.5c1 .8 2.5.8 4 0"></path></svg></span>
+        <h3 data-i="svc1">Washing</h3>
+        <p data-i="svcD1">Everyday clothes, washed clean.</p>
+        <span class="from"><span><span data-i="from">From</span> <b>2</b> <span data-i="aed">AED</span></span><span class="go"><svg class="flip" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></span>
+      </a>
+      <a class="svc" href="#prices" data-svc="2">
+        <span class="ic2"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5s3.8 4.2 3.8 6.6a3.8 3.8 0 0 1-7.6 0C8.2 6.7 12 2.5 12 2.5z"></path><path d="M3 20.5h15.5a2 2 0 0 0 2-2V17A3.5 3.5 0 0 0 17 13.5H8"></path><path d="M3 20.5l2-4H20.5"></path></svg></span>
+        <h3 data-i="svc2">Wash &amp; Iron</h3>
+        <p data-i="svcD2">Washed, ironed and ready to wear.</p>
+        <span class="from"><span><span data-i="from">From</span> <b>4</b> <span data-i="aed">AED</span></span><span class="go"><svg class="flip" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></span>
+      </a>
+      <a class="svc" href="#prices" data-svc="3">
+        <span class="ic2"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6a2 2 0 1 1 2 2v2"></path><path d="M12 10L2.5 17.5h19z"></path><path d="M5 17.5v3h14v-3"></path></svg></span>
+        <h3 data-i="svc3">Dry Clean</h3>
+        <p data-i="svcD3">Gentle care for suits, abayas and delicate items.</p>
+        <span class="from"><span><span data-i="from">From</span> <b>6</b> <span data-i="aed">AED</span></span><span class="go"><svg class="flip" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec prices weave" id="prices">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="kick"><i></i><span data-i="navPrices">Prices</span></span><h2 class="h2" data-i="priceTitle">Price list</h2></div>
+      <p data-i="priceSub">Simple prices for every item. Choose a service below.</p>
+    </div>
+    <div class="receipt">
+      <div class="tabs" id="tabs" role="group" aria-label="Service"></div>
+      <div class="bar">
+        <span class="cur"><span data-i="showing">Showing</span> <b id="svc-name">Steam Iron</b> · <span data-i="aedFull">prices in AED</span></span>
+        <div class="vsw" role="group" aria-label="View">
+          <button type="button" class="vb" id="view-one" aria-pressed="true" data-i="viewOne">By service</button>
+          <button type="button" class="vb" id="view-all" aria-pressed="false" data-i="viewAll">All prices</button>
+        </div>
+      </div>
+      <div class="plist" id="plist"></div>
+      <div class="tg-box" id="tgbox" hidden><div class="tg" id="tg"></div></div>
+      <div class="note">
+        <span data-i="note">More items available, ask us on WhatsApp.</span>
+        <a class="btn-wa" data-wa href="#" target="_blank" rel="noopener" data-i="ask">Ask on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="area">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="kick"><i></i><span data-i="navArea">Delivery</span></span><h2 class="h2" data-i="areaTitle">Pickup &amp; delivery</h2></div>
+    </div>
+    <div class="area-grid">
+      <div class="info">
+        <p class="big" data-i="areaText">We pick up and deliver across Sharjah and Ajman (small delivery charge).</p>
+        <div class="li">
+          <span class="ics"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></span>
+          <div><b data-i="shop">Our shop</b><span class="ltr">Dar Bu Daneq Tower, Shop 4, Mubashar Bin Abd Munther St, Bu Daniq, Al Qasimiah, Sharjah</span></div>
+        </div>
+        <div class="li">
+          <span class="ics"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l2 5-2.5 1.5a11 11 0 0 0 6 6l1.5-2.5 5 2V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5.5a2 2 0 0 1 2-2z"></path></svg></span>
+          <div><b data-i="phoneLbl">Phone</b><a href="tel:+971586210689"><span class="ltr">058 621 0689</span></a> (<span data-i="wa">WhatsApp</span>) · <a href="tel:+971586587535"><span class="ltr">058 658 7535</span></a></div>
+        </div>
+        <div class="li">
+          <span class="ics"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M3.5 6.5l8.5 6.5 8.5-6.5"></path></svg></span>
+          <div><b data-i="emailLbl">Email</b><a href="mailto:info@oudnmusk.com">info@oudnmusk.com</a></div>
+        </div>
+      </div>
+      <div class="zones">
+        <div class="zone weave">
+          <span class="zk" data-i="zoneLbl">We cover</span>
+          <b data-i="sharjah">Sharjah</b>
+          <span class="za" data-i="sharjah2">الشارقة</span>
+        </div>
+        <div class="zone alt">
+          <span class="zk" data-i="zoneLbl">We cover</span>
+          <b data-i="ajman">Ajman</b>
+          <span class="za" data-i="ajman2">عجمان</span>
+        </div>
+        <div class="zone-note">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M2.5 6.5h11v10h-11z"></path><path d="M13.5 10h4l3 3.2v3.3h-7z"></path><circle cx="6.5" cy="17.5" r="1.9"></circle><circle cx="17" cy="17.5" r="1.9"></circle></svg>
+          <span data-i="delTxt">Pickup and delivery in both cities. A small delivery charge applies.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta weave" style="background-color:#164543">
+  <div class="wrap">
+    <svg width="40" height="52" viewBox="0 0 40 52" aria-hidden="true"><path d="M20 4C30 14 32 22 26 29C23 32 17 32 14 29C8 23 11 14 20 4Z" fill="#D98A5B"></path><path class="wisp" d="M20 34C14 39 25 43 19 50" stroke="#5CC6C4" stroke-width="2"></path></svg>
+    <h2 class="h2" data-i="ctaTitle">Ready for fresh clothes?</h2>
+    <p data-i="ctaSub">Send us a message and we will arrange your pickup.</p>
+    <a class="btn-wa" data-wa href="#" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.6-2-1-.9.8a4 4 0 0 1-2-2l.8-.9-1-2z"></path></svg>
+      <span data-i="book">Book a pickup on WhatsApp</span>
+    </a>
+    <div class="tels">
+      <span data-i="orCall">Or call</span>
+      <a class="tel" href="tel:+971586210689"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l2 5-2.5 1.5a11 11 0 0 0 6 6l1.5-2.5 5 2V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5.5a2 2 0 0 1 2-2z"></path></svg><span class="ltr">058 621 0689</span></a>
+      <a class="tel" href="tel:+971586587535"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3.5h3.5l2 5-2.5 1.5a11 11 0 0 0 6 6l1.5-2.5 5 2V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5.5a2 2 0 0 1 2-2z"></path></svg><span class="ltr">058 658 7535</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <span class="brand" style="color:#fff">
+          <svg width="44" height="44" viewBox="0 0 56 56" aria-hidden="true">
+            <path d="M28 1.5C31.6 5.2 32.6 8 30.4 10.4C29.4 11.4 26.9 11.5 25.9 10.2C24.3 8.2 25.6 5.2 28 1.5Z" fill="#D98A5B"></path>
+            <rect x="5" y="14" width="46" height="39" rx="14" fill="#5CC6C4" fill-opacity="0.14" stroke="#5CC6C4" stroke-width="1.8"></rect>
+            <path d="M15 31V45H41V31" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"></path>
+            <path d="M20 25Q28 20 36 25" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M20 25L28 31L24 37Z M36 25L28 31L32 37Z" fill="#fff"></path>
+            <path d="M28 31V45" stroke="#CDEFEE" stroke-width="1.5"></path>
+          </svg>
+          <span class="brand-t">
+            <span class="brand-1">OUD<i>and</i>MUSK</span>
+            <span class="brand-2"><span class="f-en">Laundry</span><span aria-hidden="true">·</span><span class="f-ar" lang="ar">عود و مسك</span></span>
+          </span>
+        </span>
+        <p class="ft-tag" data-i="sub">Laundry, ironing and dry cleaning in Sharjah &amp; Ajman.</p>
+      </div>
+      <div>
+        <h4 data-i="contact">Contact</h4>
+        <ul>
+          <li><a data-wa href="#" target="_blank" rel="noopener"><span data-i="wa">WhatsApp</span>: <span class="ltr">058 621 0689</span></a></li>
+          <li><a href="tel:+971586587535"><span class="ltr">058 658 7535</span></a></li>
+          <li><a href="mailto:info@oudnmusk.com">info@oudnmusk.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i="visit">Visit us</h4>
+        <ul><li><span class="ltr">Dar Bu Daneq Tower, Shop 4, Mubashar Bin Abd Munther St, Bu Daniq, Al Qasimiah, Sharjah</span></li></ul>
+      </div>
+      <div>
+        <h4 data-i="follow">Follow us</h4>
+        <span class="fb"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3.5h-2.5A3.5 3.5 0 0 0 9 7v3H6.5v3.5H9v7h3.5v-7H15l.5-3.5h-3V7.5a1 1 0 0 1 1-1H15z"></path></svg><span><b>Facebook</b>Oud and Musk Laundry</span></span>
+      </div>
+    </div>
+    <div class="ft-b">
+      <span>© 2026 Oud and Musk Laundry</span>
+      <span data-i="byDuskel">Website preview by Duskel</span>
+    </div>
+  </div>
+</footer>
+
+<a class="fab" data-wa href="#" target="_blank" rel="noopener" aria-label="Book a pickup on WhatsApp" id="fab">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.6-2-1-.9.8a4 4 0 0 1-2-2l.8-.9-1-2z"></path></svg>
+</a>
+
+<script>
+(function(){
+  var WA='https://wa.me/971586210689?text=Hi%2C%20I%27d%20like%20to%20book%20a%20pickup';
+  var MIN=[2,2,4,6];
+  var ITEMS=[
+    ['Shirt','قميص',[2,2,4,6]],['T-Shirt','تيشيرت',[2,2,4,6]],['Trousers / Pants','بنطلون',[2,2,4,6]],['Shorts','شورت',[2,2,4,6]],
+    ['Kandura','كندورة',[3,3,6,10]],['Gutrah','غترة',[3,2,4,6]],['Abaya','عباية',[5,5,8,10]],['Shela','شيلة',[2,2,4,6]],
+    ['Dress','فستان عادي',[6,6,10,15]],['Blouse','بلوزة',[3,3,5,8]],['Skirt','تنورة',[3,3,5,8]],['Hoodie / Sweatshirt','سويت شيرت',[4,4,8,12]],
+    ['Doctor Coat','بالطو دكتور',[3,3,5,8]],['Suit (2 pieces)','بدلة رسمية قطعتين',[10,10,20,25]],['Jacket','جاكيت',[5,8,10,15]],['Coat','جاكيت طويل',[8,10,15,20]],
+    ['Doctor Uniform (2 pieces)','بدلة دكتور قطعتين',[5,5,10,15]],['School Uniform (2 pieces)','زي مدرسي قطعتين',[3,3,6,8]],
+    ['Soldier Uniform (2 pieces)','بدلة عسكرية قطعتين',[12,15,20,25]],['Boiler Suit','بدلة حماية',[6,10,14,20]]
+  ];
+  var AR={
+    navHow:'طريقة العمل',navSvc:'خدماتنا',navPrices:'الأسعار',navArea:'التوصيل',wa:'واتساب',
+    eyebrow:'غسيل · كي · تنظيف جاف',h1a:'ملابس نظيفة ومنعشة.',h1b:'نستلمها من باب بيتك.',
+    sub:'غسيل وكي وتنظيف جاف في الشارقة وعجمان.',book:'احجز الاستلام عبر واتساب',see:'شاهد الأسعار',
+    ratingLbl:'تقييم Google',reviews:'127 تقييمًا',tagItem:'قميص',tagSvc:'كي بالبخار',aed:'درهم',aedFull:'الأسعار بالدرهم',chip:'الشارقة · عجمان',
+    howTitle:'ثلاث خطوات سهلة.',howSub:'لا داعي للخروج من البيت. أرسل لنا رسالة فقط.',
+    s1:'راسلنا على واتساب',d1:'أرسل لنا القطع وعنوانك.',s2:'نستلم ملابسك',d2:'من بيتك في الشارقة أو عجمان.',s3:'نظيفة ومكوية، تعود إليك',d3:'نوصلها إلى باب بيتك.',
+    svcTitle:'أربع خدمات. أسعار واضحة.',svcSub:'اضغط على الخدمة لترى أسعارها.',
+    svc0:'كي بالبخار',svc1:'غسيل',svc2:'غسيل وكي',svc3:'تنظيف جاف',
+    svcD0:'ملابس مرتبة بدون تجاعيد.',svcD1:'ملابسك اليومية، مغسولة بعناية.',svcD2:'مغسولة ومكوية وجاهزة للبس.',svcD3:'عناية لطيفة بالبدلات والعبايات والقطع الحساسة.',
+    from:'من',priceTitle:'قائمة الأسعار',priceSub:'أسعار بسيطة لكل قطعة. اختر الخدمة.',showing:'أسعار',viewOne:'حسب الخدمة',viewAll:'كل الأسعار',item:'القطعة',
+    note:'يوجد المزيد من القطع، اسألنا على واتساب.',ask:'اسألنا على واتساب',
+    areaTitle:'الاستلام والتوصيل',areaText:'نستلم ونوصل في جميع أنحاء الشارقة وعجمان (رسوم توصيل بسيطة).',
+    shop:'محلنا',phoneLbl:'الهاتف',emailLbl:'البريد الإلكتروني',zoneLbl:'نغطي',sharjah:'الشارقة',ajman:'عجمان',sharjah2:'Sharjah',ajman2:'Ajman',
+    delTxt:'استلام وتوصيل في المدينتين. رسوم توصيل بسيطة.',
+    ctaTitle:'جاهز لملابس منعشة؟',ctaSub:'أرسل لنا رسالة ونرتب موعد الاستلام.',orCall:'أو اتصل',
+    contact:'تواصل معنا',visit:'زورونا',follow:'تابعونا',byDuskel:'معاينة الموقع من Duskel'
+  };
+  var SVC={en:['Steam Iron','Washing','Wash & Iron','Dry Clean'],ar:['كي بالبخار','غسيل','غسيل وكي','تنظيف جاف']};
+  var EN={};
+  var nodes=document.querySelectorAll('[data-i]');
+  nodes.forEach(function(n){EN[n.getAttribute('data-i')]=EN[n.getAttribute('data-i')]||n.textContent;});
+  EN.item='Item';
+  var state={lang:'en',svc:0,view:'one'};
+
+  document.querySelectorAll('[data-wa]').forEach(function(a){a.href=WA;});
+
+  function tr(k){return (state.lang==='ar'?AR:EN)[k]||EN[k]||'';}
+  function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e;}
+
+  function renderPrices(){
+    var L=state.lang,s=state.svc,names=SVC[L];
+    document.getElementById('svc-name').textContent=names[s];
+    var tabs=document.getElementById('tabs');tabs.textContent='';
+    names.forEach(function(n,i){
+      var b=el('button','tab');b.type='button';b.id='tab-'+i;b.setAttribute('aria-pressed',i===s?'true':'false');
+      b.appendChild(el('b',null,n));b.appendChild(el('small',null,tr('from')+' '+MIN[i]+' '+tr('aed')));
+      b.addEventListener('click',function(){state.svc=i;renderPrices();});
+      tabs.appendChild(b);
+    });
+    var one=state.view==='one';
+    document.getElementById('view-one').setAttribute('aria-pressed',one?'true':'false');
+    document.getElementById('view-all').setAttribute('aria-pressed',one?'false':'true');
+    var pl=document.getElementById('plist'),box=document.getElementById('tgbox');
+    pl.hidden=!one;box.hidden=one;
+    pl.textContent='';
+    var secCls=L==='en'?'ps f-ar':'ps f-en';
+    ITEMS.forEach(function(x){
+      var r=el('div','prow'),pn=el('span','pn');
+      pn.appendChild(el('b',null,L==='en'?x[0]:x[1]));pn.appendChild(el('span',secCls,L==='en'?x[1]:x[0]));
+      var pv=el('span','pv',String(x[2][s]));pv.appendChild(el('small',null,tr('aed')));
+      r.appendChild(pn);r.appendChild(el('span','leader'));r.appendChild(pv);pl.appendChild(r);
+    });
+    var tg=document.getElementById('tg');tg.textContent='';
+    var h=el('div','tr th'),hc=el('div','cn');hc.appendChild(el('b',null,tr('item')));h.appendChild(hc);
+    names.forEach(function(n,i){var c=el('div',i===s?'c on':'c'),b=el('button','hb',n);b.type='button';b.addEventListener('click',function(){state.svc=i;renderPrices();});c.appendChild(b);h.appendChild(c);});
+    tg.appendChild(h);
+    ITEMS.forEach(function(x){
+      var r=el('div','tr'),cn=el('div','cn');
+      cn.appendChild(el('b',null,L==='en'?x[0]:x[1]));cn.appendChild(el('span',secCls,L==='en'?x[1]:x[0]));r.appendChild(cn);
+      x[2].forEach(function(v,i){r.appendChild(el('div',i===s?'c on':'c',String(v)));});
+      tg.appendChild(r);
+    });
+  }
+
+  function setLang(L){
+    state.lang=L;
+    var root=document.documentElement;root.lang=L;root.dir=L==='ar'?'rtl':'ltr';
+    nodes.forEach(function(n){n.textContent=tr(n.getAttribute('data-i'));});
+    document.getElementById('lang-en').setAttribute('aria-pressed',L==='en'?'true':'false');
+    document.getElementById('lang-ar').setAttribute('aria-pressed',L==='ar'?'true':'false');
+    document.getElementById('fab').setAttribute('aria-label',tr('book'));
+    renderPrices();
+  }
+
+  document.getElementById('lang-en').addEventListener('click',function(){setLang('en');});
+  document.getElementById('lang-ar').addEventListener('click',function(){setLang('ar');});
+  document.getElementById('view-one').addEventListener('click',function(){state.view='one';renderPrices();});
+  document.getElementById('view-all').addEventListener('click',function(){state.view='all';renderPrices();});
+  document.querySelectorAll('[data-svc]').forEach(function(a){a.addEventListener('click',function(){state.svc=+a.getAttribute('data-svc');renderPrices();});});
+  renderPrices();
+})();
+</script>
+</body>
+</html>
